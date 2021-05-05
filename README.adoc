@@ -15,7 +15,7 @@ With the much needed help from our community, this project will grow in the same
 == Feature Planning
 This project uses https://www.zenhub.com/[ZenHub] to prioritize the feature roadmap and help organize the project plan.
 The project board can be accessed https://app.zenhub.com/workspaces/authorization-server-5e8f3182b5e8f5841bfc4902/board?repos=248032165[here].
-It is recommended to install the ZenHub https://www.zenhub.com/extension[browser extension] as it integrates natively within GitHub's user interface.
+It is recommended to install the ZenHub https://www.zenhub.com/extension[browser extension] as it integrates natively within GitHub's userDB interface.
 
 The completed and upcoming feature list can be viewed in the https://github.com/spring-projects-experimental/spring-authorization-server/wiki/Feature-List[wiki].
 

@@ -1,6 +1,10 @@
 server:
   port: 9000
 
+url: jdbc:sqlite:/tmp/bennoweb.sqlite
+
+driverClassName: org.sqlite.JDBC
+
 logging:
   level:
     root: INFO
@@ -8,3 +12,6 @@ logging:
     org.springframework.security: INFO
     org.springframework.security.oauth2: INFO
 #    org.springframework.boot.autoconfigure: DEBUG
+
+springjpa:
+  database-platform: com.example.sqliteexample.SQLiteDataTypesConfig
