@@ -5,6 +5,8 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import sample.entities.UserDB;
 import sample.repositories.UserRepository;
@@ -25,8 +27,9 @@ public class JpaUserDetailsService implements UserDetailsService {
 
 
 		UserDB u = userRepository.findUserById(username).orElseThrow(s);
+		PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
 		return User.withUsername(u.getName())
-				.password(u.getPassword())
+				.password(encoder.encode(u.getPassword()))
 				.roles(u.getRole()).build();
 		//return new CustomUserDetails(u);
 	}
